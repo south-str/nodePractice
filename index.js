@@ -4,6 +4,7 @@ const server = require('./src/server/server.js'),
 
 let handle = {};
 handle['/'] = requestHandlers.root;
-handle['/asyncReadFile'] = requestHandlers.asyncReadFile;
+handle['/promiseReadFile'] = requestHandlers.promiseReadFile;
+handle['/promiseReadDir'] = requestHandlers.promiseReadDir;
 
 server.start(router.route, handle);
