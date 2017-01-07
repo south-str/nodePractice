@@ -4,5 +4,6 @@ const server = require('./src/server/server.js'),
 
 let handle = {};
 handle['/'] = requestHandlers.root;
+handle['/asyncReadFile'] = requestHandlers.asyncReadFile;
 
 server.start(router.route, handle);

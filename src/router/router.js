@@ -1,6 +1,6 @@
 function route(handle, pathname, response, request){
   console.log(`About to route a request for ${pathname}`);
-  if(toString.call(handle[pathname]) === '[object Function]'){
+  if(isFunction(handle[pathname])){
     handle[pathname](response, request);
   }else{
     console.log(`No request handler found for ${pathname}`);
@@ -10,4 +10,9 @@ function route(handle, pathname, response, request){
   }
 }
 
+function isFunction(func){
+  if(toString.call(func) === '[object Function]') return true;
+  if(toString.call(func) === '[object AsyncFunction]') return true;
+  return false;
+}
 exports.route = route;

@@ -23,4 +23,25 @@ function root(response){
     });
 }
 
+function readFile(filename){
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, (err, data) => {
+      if(err){
+        reject(err);
+      }else{
+        resolve(data);
+      }
+    });
+  });
+}
+
+async function asyncReadFile(response){
+  console.log(`Request handler 'asyncReadFile' was called.`);
+  const html = await readFile(__dirname + '/../client/template/index.html');
+  response.statusCode = 200;
+  response.setHeader('Content-Type', 'text/html');
+  response.end(html);
+}
+
 exports.root = root;
+exports.asyncReadFile = asyncReadFile;
