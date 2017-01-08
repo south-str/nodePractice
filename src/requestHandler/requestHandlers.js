@@ -1,36 +1,41 @@
 const querystring = require('querystring'),
-  fs = require('fs');
+  fs = require('fs'),
+  __ = require('underscore');
 
-function root(response){
-  console.log(`Request handler 'root' was called.`);
-  const promise = new Promise((resolve, reject) => {
-    fs.readFile('src/client/template/index.html', (err, data) => {
-      if(err){
-        reject(err);
-      }else{
-        resolve(data);
-      }
-    });
-  });
-  promise
-    .then(data => {
-      response.statusCode = 200;
-      response.setHeader('Content-Type', 'text/html');
-      response.end(data);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+async function root(response){
+  //console.log(`Request handler 'root' was called.`);
+  try{
+    const index = await readFile('src/client/template/index.html'),
+      body = await readFile('src/client/template/body.html'),
+      compiledIndex = __.template(index),
+      compiledBody = __.template(body),
+      bodyInclude = compiledBody({title: 'first article', article: '<p>test</p>'});
+    response.statusCode = 200;
+    response.setHeader('Content-Type', 'text/html');
+    response.write(compiledIndex({
+      title: 'test',
+      body: bodyInclude
+    }));
+  }catch(e){
+    console.log(`[root]:`);
+    console.log(e);
+    response.statusCode = 404;
+    response.setHeader('Content-Type', 'text/html');
+    response.write(`<p>${e}</p>`);
+  }
+  response.end();
 }
 
-function readFile(filename){
+function readFile(filename, encode = 'utf-8'){
   return new Promise((resolve, reject) => {
-    fs.readFile(filename, (err, data) => {
+    fs.readFile(filename, encode, (err, data) => {
       if(err){
-        console.log(`[fs]:${err}`);
+        console.log(`[readFile]:Failed`);
+        console.log(`[readFile]:${err}`);
         reject(err);
       }else{
-        console.log(`[fs]:${data}`);
+        console.log(`[readFile]:Succeeded`);
+        console.log(`[readFile]:${data}`);
         resolve(data);
       }
     });
