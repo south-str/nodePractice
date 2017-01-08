@@ -3,3 +3,4 @@
 *.log
 
 /src/nodePractice/
+/node_modules/
