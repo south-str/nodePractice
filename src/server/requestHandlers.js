@@ -1,5 +1,4 @@
 const fs = require('fs'),
-  __ = require('underscore'),
   view = require('../view/view.js');
 
 async function root(response){
