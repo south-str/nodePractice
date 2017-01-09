@@ -1,0 +1,7 @@
+{
+  "navi": [
+    "<a href=\"/\">index</a>",
+    "<a href=\"promiseReadFile\">promiseReadFile</a>",
+    "<a href=\"promiseReadDir\">promiseReadDir</a>"
+  ]
+}
