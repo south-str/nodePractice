@@ -1,0 +1,202 @@
+@charset "UTF-8";
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  margin: 0px;
+  height: 0px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+div#main{
+  width: 700px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: auto;
+  margin-top: 0px;
+}
+
+nav {
+  margin-top: 43px;
+  margin-left: 43px;
+  position: fixed;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+nav ul li {
+  margin: 0px;
+  padding: 0px;
+  width: 67px;
+  height: 27px;
+}
+
+nav ul li a#index {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/1.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#index:hover {
+  background-image: url(../material/image/menu/1o.jpg);
+}
+
+nav ul li a#about {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/2.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#about:hover {
+  background-image: url(../material/image/menu/2o.jpg);
+}
+
+nav ul li a#picture {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/3.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#picture:hover {
+  background-image: url(../material/image/menu/3o.jpg);
+}
+
+nav ul li a#works {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/4.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#works:hover {
+  background-image: url(../material/image/menu/4o.jpg);
+}
+
+nav ul li a#link {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/5.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#link:hover {
+  background-image: url(../material/image/menu/5o.jpg);
+}
+
+nav ul li a#log {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/6.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#log:hover {
+  background-image: url(../material/image/menu/6o.jpg);
+}
+
+nav ul li a#pixiv {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/7.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#pixiv:hover {
+  background-image: url(../material/image/menu/7o.jpg);
+}
+
+nav ul li a#twitter {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/8.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#twitter:hover {
+  background-image: url(../material/image/menu/8o.jpg);
+}
+
+nav ul li a#clap {
+  padding-top: 27px;
+  width: 100%;
+  height: 0px;
+  background-image: url(../material/image/menu/9.jpg);
+  display: block;
+  overflow: hidden;
+}
+
+nav ul li a#clap:hover {
+  background-image: url(../material/image/menu/9o.jpg);
+}
+
+footer {
+  padding: 0px;
+  margin: 0px;
+  width: 590px;
+  margin-left: 19px;
+  padding-left: 86px;
+  border-left: 5px solid black;
+  text-align: center;
+  color: gray;
+  font-size: small;
+}
+
+embed {
+  padding: 0px;
+  margin: 0px;
+  vertical-align: top;
+}
+
+embed#topLogo {
+  width: 700px;
+  height: 43px;
+}
+
+embed#diaryLogo {
+  width:700px;
+  height: 27px;
+}
+

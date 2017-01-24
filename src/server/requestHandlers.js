@@ -1,4 +1,5 @@
 const fs = require('fs'),
+  url = require('url'),
   view = require('../view/view.js');
 
 async function root(response){
@@ -24,4 +25,10 @@ async function root(response){
     });
 }
 
+async function readFile(response, request){
+  const pathname = url.parse(request.url).pathname;
+  console.log(`readFile:${pathname}`);
+}
+
 exports.root = root;
+exports.readFile = readFile;

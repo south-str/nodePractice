@@ -2,15 +2,15 @@ const fs = require('fs'),
   __ = require('underscore'),
   data = require('../data/data.js');
 
-function readTemplate(filename, encode = 'utf-8'){
+function readTextFile(filename, encode = 'utf-8'){
   return new Promise((resolve, reject) => {
     fs.readFile(filename, encode, (err, data) => {
       if(err){
-        console.log('[readTemplate]:Failed');
+        console.log('[readTextFile]:Failed');
         console.log(err);
         reject(err);
       }else{
-        console.log('[readTemplate]:Succeeded');
+        console.log('[readTextFile]:Succeeded');
         resolve(data);
       }
     });
@@ -24,11 +24,11 @@ function errorReport(e, str){
 
 async function root(/* */){
   try{
-    const indexTemplate = await readTemplate('src/client/template/index.html')
+    const indexTemplate = await readTextFile('src/client/template/index.html')
       .then(data => __.template(data), e => { errorReport(e, '[view root]:then') }),
-      mainTemplate = await readTemplate('src/client/template/main.html')
+      mainTemplate = await readTextFile('src/client/template/main.html')
       .then(data => __.template(data), e => { errorReport(e, '[view root]:then') }),
-      naviTemplate = await readTemplate('src/client/template/navi.html')
+      naviTemplate = await readTextFile('src/client/template/navi.html')
       .then(data => __.template(data), e => { errorReport(e, '[view root]:then') }),
       indexData = await data.root()
       .then(data => data, e => { errorReport(e, '[view root]:then') });
@@ -45,3 +45,4 @@ async function root(/* */){
 }
 
 exports.root = root;
+exports.readTextFile = readTextFile;

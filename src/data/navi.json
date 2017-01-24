@@ -1,7 +1,12 @@
 {
   "navi": [
-    "<a href=\"/\">index</a>",
-    "<a href=\"promiseReadFile\">promiseReadFile</a>",
-    "<a href=\"promiseReadDir\">promiseReadDir</a>"
+    "<a class = \"\" href=\"/\">index</a>",
+    "<a class = \"\" href=\"\">Ancher</a>",
+    "<a class = \"\" href=\"\">Ancher</a>",
+    "<a class = \"\" href=\"\">Ancher</a>",
+    "<a class = \"\" href=\"\">Ancher</a>",
+    "<a class = \"\" href=\"\">Ancher</a>",
+    "<a class = \"\" href=\"\">Ancher</a>",
+    "<a class = \"\" href=\"\">Ancher</a>"
   ]
 }
